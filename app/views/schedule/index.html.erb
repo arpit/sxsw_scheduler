@@ -1,0 +1,6 @@
+<ul>
+<%= @events.each do |s| %>
+	<li><a href='http://schedule.sxsw.com/<%= s.link %>'><%= s.title %> </a> </li>
+<% end %>
+
+</ul>
