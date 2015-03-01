@@ -4,7 +4,9 @@
 	<div class="time_slot">
 	<p class="time_header"><%= key %></p>
 
-	<% val.group_by(&:location).each do |loc, ev| %>
+	<% location_grouped_events = val.group_by(&:location)  %>
+	<% location_grouped_events.keys.sort %>
+	<% location_grouped_events.each do |loc, ev| %>
 		<p class="location_header"><%= loc %> </p>
 		<ul>
 		<%  ev.each do |event| %>
