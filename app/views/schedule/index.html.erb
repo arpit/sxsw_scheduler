@@ -1,6 +1,20 @@
-<ul>
-<%= @events.each do |s| %>
-	<li><a href='http://schedule.sxsw.com/<%= s.link %>'><%= s.title %> </a> </li>
-<% end %>
 
-</ul>
+<div id="schedules_container">
+<% @cols.each do |key, val| %>
+	<div class="time_slot">
+	<p class="time_header"><%= key %></p>
+
+	<% val.group_by(&:location).each do |loc, ev| %>
+		<p class="location_header"><%= loc %> </p>
+		<ul>
+		<%  ev.each do |event| %>
+			<li><a href='http://schedule.sxsw.com/<%= event.link %>'><%= event.title %> </a> </li>
+			
+		<% end %>
+		</ul>
+	
+	<% end %> 
+
+	</div>
+
+<% end %> 

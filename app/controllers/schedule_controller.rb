@@ -20,10 +20,18 @@ class ScheduleController < ApplicationController
 				event = Event.new
 				event.title = t.content
 				event.link = t["href"]
+				event.location = loc_node.content
+				time = row.at_css("div.date_time").content.split("-")
+				event.start_time = time[0].chomp
+				event.end_time = time[1].chomp unless time[1] == nil
 				@events << event
 
 			end
 		end
+		@cols = @events.group_by(&:start_time)
+
+
+
 
 
 	end
