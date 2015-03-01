@@ -23,11 +23,34 @@ li{
 }
 .location_header{
 	background: #FFCF00;
-	padding: 10px;
+	padding: 5px;
+	height:20px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 	border: 1px solid #555;
 	margin: 1px;
+}
+
+#app_container{
+
 }
 
 #schedules_container{
 	width:10000px;
 }
+
+@media (max-width: 1200px) {
+  body{
+  	font-size: 16px;
+  }
+
+  .time_slot{
+  	width:50vw;
+  	height: 100vh;
+  	overflow: auto;
+  }
+
+
+}
+
