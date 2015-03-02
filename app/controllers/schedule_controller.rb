@@ -2,8 +2,15 @@ require 'open-uri'
 
 class ScheduleController < ApplicationController
 
-	def index 
-		doc = Nokogiri::HTML(open("http://schedule.sxsw.com/?conference=interactive&day=13"))
+	def index
+
+		if(params[:day] == nil)
+			day = 13
+		else
+			day = params[:day]
+		end
+
+		doc = Nokogiri::HTML(open("http://schedule.sxsw.com/?conference=interactive&day=#{day}"))
 		rows = doc.css("div.eventcol")
 		@events = Array.new
 		rows.each do |row|

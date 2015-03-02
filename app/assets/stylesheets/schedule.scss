@@ -2,9 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body{
+	height: 100vh;
+}
 .time_slot{
 	float:left;
-	height:1000px;
 	width:200px;
 }
 .time_header{
@@ -40,26 +42,46 @@ li{
 }
 
 #schedules_container{
-	width:10000px;
+	width:20000px;
+	padding-top: 9vh;
 }
+
+#date_chooser{
+	margin-top: 0;
+  	height: 5vh;
+  	width: 100%;
+  	padding: 2vh;
+  	text-align: center;
+  	background: #dfdfdf;
+  	position: fixed;
+  }
+
+  select{
+  	width:200px;
+  	height:30px;
+  	font-size: 16px;
+  }
+
+  .all_events{
+	max-height: 90vh;
+  	overflow: auto;
+  }
 
 @media (max-width: 1200px) {
   body{
   	font-size: 16px;
+  	
   }
 
   .time_slot{
-  	width:100vw;
+  	width:70vw;
   }
 
   .time_header{
-  	height: 6vh;
+  	height: 5vh;
   }
 
-  .all_events{
-	height: 94vh;
-  	overflow: auto;
-  }
+  
 
 
 }
