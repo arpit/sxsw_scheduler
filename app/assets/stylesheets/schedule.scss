@@ -4,6 +4,7 @@
 
 body{
 	height: 100vh;
+	overflow: hidden;
 }
 .time_slot{
 	float:left;
@@ -47,7 +48,7 @@ li{
 }
 
 #schedules_container{
-	width:20000px;
+	width:8000px;
 }
 
 #date_chooser{
