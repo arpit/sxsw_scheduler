@@ -7,8 +7,10 @@ body{
 	overflow: hidden;
 }
 .time_slot{
-	float:left;
+	display: inline-block;
 	width:200px;
+	font-size: 14px;
+	vertical-align: top;
 }
 .time_header{
 	padding: 10px;
@@ -34,6 +36,7 @@ li{
 	padding: 10px;
 	height: 60px;	
 	overflow: hidden;
+	white-space: normal;
 	background:#dfdfdf;
 	margin: 2px;
 }
@@ -43,8 +46,11 @@ li{
 }
 
 #schedules_boxer{
+	white-space: nowrap;
+	font-size: 0;
 	width: 100%;
-	overflow: auto;
+	max-height: 90vh;
+	overflow: scroll;
 }
 
 #schedules_container{
@@ -85,6 +91,9 @@ li{
   	height: 5vh;
   }
 
+  #schedules_boxer{
+  	max-height: 95vh;
+  }
   
 
 
