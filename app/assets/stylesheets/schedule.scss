@@ -2,15 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-li{
-	list-style: none;
-	padding: 10px;
-	height: 60px;	
-	overflow: auto;
-	background:#dfdfdf;
-	margin: 2px;
-}
-
 .time_slot{
 	float:left;
 	height:1000px;
@@ -19,7 +10,8 @@ li{
 .time_header{
 	padding: 10px;
 	background: #FFF2A6;
-	border-left: 1px solid #333;
+	border-left: 1px solid #555;
+	border-bottom: 1px solid #555;
 }
 .location_header{
 	background: #FFCF00;
@@ -28,8 +20,19 @@ li{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-	border: 1px solid #555;
+	border-bottom: 1px solid #555;
 	margin: 1px;
+}
+
+
+
+li{
+	list-style: none;
+	padding: 10px;
+	height: 60px;	
+	overflow: hidden;
+	background:#dfdfdf;
+	margin: 2px;
 }
 
 #app_container{
@@ -43,11 +46,19 @@ li{
 @media (max-width: 1200px) {
   body{
   	font-size: 16px;
+  	overflow: hidden;
   }
 
   .time_slot{
   	width:50vw;
-  	height: 100vh;
+  }
+
+  .time_header{
+  	height: 6vh;
+  }
+
+  .all_events{
+	height: 94vh;
   	overflow: auto;
   }
 

@@ -3,20 +3,20 @@
 <% @cols.each do |key, val| %>
 	<div class="time_slot">
 	<p class="time_header"><%= key %></p>
-
+	<div class="all_events">
 	<% location_grouped_events = val.group_by(&:location)  %>
 	<% location_grouped_events.keys.sort %>
 	<% location_grouped_events.each do |loc, ev| %>
 		<p class="location_header"><%= loc %> </p>
 		<ul>
 		<%  ev.each do |event| %>
-			<li><a href='http://schedule.sxsw.com/<%= event.link %>'><%= event.title %> </a> </li>
+			<li><a href='http://schedule.sxsw.com/<%= event.link %>'><%= event.title[0..50] %> </a> </li>
 			
 		<% end %>
 		</ul>
 	
 	<% end %> 
-
+	</div>
 	</div>
 
 <% end %> 
