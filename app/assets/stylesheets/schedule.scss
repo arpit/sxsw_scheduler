@@ -41,7 +41,7 @@ li{
 
 .event_cell{
 	position:relative;
-	padding: 10px 10px 40px 10px;
+	padding: 10px 10px 50px 10px;
 	height: 60px;
 	
 }
@@ -57,6 +57,7 @@ li{
 	bottom: 4px;
 	display: block;
 	background: white;
+	text-align: center;
 	padding: 10px;
 }
 
@@ -96,7 +97,7 @@ li{
   	overflow: auto;
   }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   body{
   	font-size: 16px;
   	
@@ -112,6 +113,11 @@ li{
 
   #schedules_boxer{
   	max-height: 95vh;
+  }
+
+  .star{
+  	left: 4px;
+  	padding: 10px 0;
   }
   
 

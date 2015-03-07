@@ -13,7 +13,7 @@
 <div id="schedules_container">
 <% @cols.each do |key, val| %>
 	<div class="time_slot">
-	<p class="time_header"><%= key %></p>
+	<p class="time_header"><%= key == "" ?  "No time announced" : key %></p>
 	<div class="all_events">
 	<% location_grouped_events = val.group_by(&:location)  %>
 	<% location_grouped_events.keys.sort %>
