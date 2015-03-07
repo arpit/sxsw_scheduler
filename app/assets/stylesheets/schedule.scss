@@ -33,12 +33,31 @@ body{
 
 li{
 	list-style: none;
-	padding: 10px;
-	height: 60px;	
 	overflow: hidden;
 	white-space: normal;
 	background:#dfdfdf;
 	margin: 2px;
+}
+
+.event_cell{
+	position:relative;
+	padding: 10px 10px 40px 10px;
+	height: 60px;
+	
+}
+.event_cell .times{
+	color:#666;
+	font-size: 11px;
+	margin-top: 10px;
+}
+
+.star{
+	position: absolute;
+	right: 4px;
+	bottom: 4px;
+	display: block;
+	background: white;
+	padding: 10px;
 }
 
 #app_container{
@@ -54,7 +73,7 @@ li{
 }
 
 #schedules_container{
-	width:8000px;
+	display: inline-block;
 }
 
 #date_chooser{

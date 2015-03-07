@@ -21,7 +21,12 @@
 		<p class="location_header"><%= loc %> </p>
 		<ul>
 		<%  ev.each do |event| %>
-			<li><a href='http://schedule.sxsw.com/<%= event.link %>'><%= event.title[0..50] %> </a> </li>
+			<li>
+			<div class="event_cell">
+				<a href='http://schedule.sxsw.com/<%= event.link %>'><%= event.title[0..50] %> </a>
+				<p class="times"><%= event.start_time %> - <%= event.end_time %></p><a href="#" class="star">+</a>
+			</div>
+			</li>
 			
 		<% end %>
 		</ul>
