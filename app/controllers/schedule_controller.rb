@@ -17,13 +17,7 @@ class ScheduleController < ApplicationController
 			t = row.at_css("a.link_item")
 			unless(t == nil)
 				
-				# puts t.content
-				# puts t["href"]
-				# puts row.at_css("div.date_time").content
 				loc_node = row.at_css("div.location a")
-				#.content
-				#puts loc_node["href"]
-
 				event = Event.new
 				event.title = t.content
 				event.link = t["href"]
