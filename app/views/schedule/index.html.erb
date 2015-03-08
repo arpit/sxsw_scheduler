@@ -15,16 +15,22 @@
 	<div class="time_slot">
 	<p class="time_header"><%= key == "" ?  "No time announced" : key %></p>
 	<div class="all_events">
-	<% location_grouped_events = val.group_by(&:location)  %>
-	<% location_grouped_events.keys.sort %>
-	<% location_grouped_events.each do |loc, ev| %>
-		<p class="location_header"><%= loc %> </p>
-		<ul>
+		
+		<ul class="my_events_col"></ul>
+
+		<% location_grouped_events = val.group_by(&:location)  %>
+		<% location_grouped_events.keys.sort %>
+		<% location_grouped_events.each do |loc, ev| %>
+			
+		
+		<p class="location_header "><%= loc %> </p>
+		<ul class="all_events_besides_mine" data-location="<%= loc %>">
 		<%  ev.each do |event| %>
 			<li>
 			<div class="event_cell">
 				<a href='http://schedule.sxsw.com/<%= event.link %>'><%= event.title[0..50] %> </a>
 				<p class="times"><%= event.start_time %> - <%= event.end_time %></p><a href="#" class="star">+</a>
+				<p class="event_loc_in_cell"><%= loc %></p>
 			</div>
 			</li>
 			

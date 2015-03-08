@@ -39,12 +39,21 @@ li{
 	margin: 2px;
 }
 
+.all_events_besides_mine .event_loc_in_cell{
+	display: none;
+}
+
 .event_cell{
 	position:relative;
 	padding: 10px 10px 50px 10px;
 	height: 60px;
 	
 }
+
+.my_events_col .event_cell{
+	background-color: #FFF1AE;
+}
+
 .event_cell .times{
 	color:#666;
 	font-size: 11px;
