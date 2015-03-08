@@ -5,7 +5,25 @@
 body{
 	height: 100vh;
 	overflow: hidden;
+	background: #323E47;
 }
+
+#date_chooser{
+	height: 5vh;
+  	width: 100%;
+  	padding: 10px;
+  	text-align: center;
+  	background: #323E47;
+  }
+
+ select{
+ 	background: #999;
+ 	padding: 0px 10px;
+ 	color: white;
+ 	width:200px;
+  	height:30px;
+  	font-size: 16px;
+ }
 .time_slot{
 	display: inline-block;
 	width:200px;
@@ -14,12 +32,13 @@ body{
 }
 .time_header{
 	padding: 10px;
-	background: #FFF2A6;
+	background: #00A9DE;
+	color: white;
 	border-left: 1px solid #555;
 	border-bottom: 1px solid #555;
 }
 .location_header{
-	background: #FFCF00;
+	background: #F45741;
 	padding: 5px;
 	height:20px;
 	text-overflow: ellipsis;
@@ -35,7 +54,7 @@ li{
 	list-style: none;
 	overflow: hidden;
 	white-space: normal;
-	background:#dfdfdf;
+	background:#efefef;
 	margin: 2px;
 }
 
@@ -52,6 +71,7 @@ li{
 
 .my_events_col .event_cell{
 	background-color: #FFF1AE;
+	color: #3EA151 !important;
 }
 
 .event_cell .times{
@@ -86,19 +106,6 @@ li{
 	display: inline-block;
 }
 
-#date_chooser{
-	height: 5vh;
-  	width: 100%;
-  	padding: 10px;
-  	text-align: center;
-  	background: #dfdfdf;
-  }
-
-  select{
-  	width:200px;
-  	height:30px;
-  	font-size: 16px;
-  }
 
   .all_events{
   	max-height: 100%;
