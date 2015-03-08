@@ -96,7 +96,6 @@ li{
 	background: white;
 	text-align: center;
 	padding: 10px;
-	border-radius:20px;
 }
 
 #app_container{
@@ -109,6 +108,7 @@ li{
 	width: 100%;
 	max-height: 90vh;
 	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 #schedules_container{
@@ -120,6 +120,7 @@ li{
   	max-height: 100%;
 	max-height: 90vh;
   	overflow: auto;
+  	-webkit-overflow-scrolling: touch;
   }
 
 @media (max-width: 900px) {
@@ -141,8 +142,8 @@ li{
   }
 
   .star{
-  	left: 4px;
-  	padding: 10px 0;
+  	/*left: 4px;
+  	padding: 10px 0;*/
   }
   
 
