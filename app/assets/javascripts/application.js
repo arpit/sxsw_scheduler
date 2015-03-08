@@ -29,7 +29,7 @@ $(document).ready(function(){
 		else{
 			//remove from my events
 			var loc_string = $(this).parents(".event_cell").find(".event_loc_in_cell").html()
-			parent = $('ul[data-location="'+loc_string+'"]');
+			parent = $(this).parents(".all_events").find('ul[data-location="'+loc_string+'"]');
 	
 		}
 		

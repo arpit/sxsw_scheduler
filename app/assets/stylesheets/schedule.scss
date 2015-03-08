@@ -80,6 +80,14 @@ li{
 	margin-top: 10px;
 }
 
+.all_events_besides_mine .star::after{
+	content: "+";
+}
+
+.my_events_col .star::after{
+	content:"-";
+}
+
 .star{
 	position: absolute;
 	right: 4px;
@@ -88,6 +96,7 @@ li{
 	background: white;
 	text-align: center;
 	padding: 10px;
+	border-radius:20px;
 }
 
 #app_container{

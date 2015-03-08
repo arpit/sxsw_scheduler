@@ -24,13 +24,13 @@
 			
 		
 		<p class="location_header "><%= loc %> </p>
-		<ul class="all_events_besides_mine" data-location="<%= loc %>">
+		<ul class="all_events_besides_mine" data-location="<%= loc.gsub("&","and") %>">
 		<%  ev.each do |event| %>
 			<li>
 			<div class="event_cell">
 				<a href='http://schedule.sxsw.com/<%= event.link %>'><%= event.title[0..50] %> </a>
-				<p class="times"><%= event.start_time %> - <%= event.end_time %></p><a href="#" class="star">+</a>
-				<p class="event_loc_in_cell"><%= loc %></p>
+				<p class="times"><%= event.start_time %> - <%= event.end_time %></p><a href="#" class="star"></a>
+				<p class="event_loc_in_cell"><%= loc.gsub("&","and") %></p>
 			</div>
 			</li>
 			
