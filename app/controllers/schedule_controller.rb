@@ -14,11 +14,13 @@ class ScheduleController < ApplicationController
 		rows = doc.css("div.eventcol")
 		@events = Array.new
 		rows.each do |row|
+			#puts ("=>>>"+event_id)
 			t = row.at_css("a.link_item")
 			unless(t == nil)
-				
+				event_id =  t['id']
 				loc_node = row.at_css("div.location a")
 				event = Event.new
+				event.event_id = event_id
 				event.title = t.content
 				event.link = t["href"]
 				event.location = loc_node.content
@@ -30,11 +32,6 @@ class ScheduleController < ApplicationController
 			end
 		end
 		@cols = @events.group_by(&:start_time)
-
-
-
-
-
 	end
 
 end
