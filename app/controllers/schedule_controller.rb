@@ -33,7 +33,7 @@ class ScheduleController < ApplicationController
 					event.end_time = time[1].chomp unless time[1] == nil
 					@events << event
 					puts "saving"
-					event.save
+					#event.save
 				end
 			end
 		end
