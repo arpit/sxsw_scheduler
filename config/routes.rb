@@ -56,5 +56,6 @@ Rails.application.routes.draw do
 
   resources :schedule
   resources :ping
+  root 'schedule#index'
 
 end
