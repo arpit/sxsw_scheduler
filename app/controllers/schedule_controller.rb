@@ -14,7 +14,7 @@ class ScheduleController < ApplicationController
 
 		day_int = day.to_i
 
-		last_event = Event.last(:event_day == day_int)
+		last_event = Event.where("event_day = #{day_int}").last
 		now = Time.now
 		if(last_event != nil)
 			puts "HOW OLD >>> #{(now - last_event.created_at)} "
