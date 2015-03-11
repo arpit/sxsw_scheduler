@@ -1,13 +1,15 @@
 
 <div id="date_chooser">
 	<select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-    <option value="">Select Day</option>
-    <option value="/schedule?day=13">Friday, March 13</option>
-    <option value="/schedule?day=14">Saturday, March 14</option>
-    <option value="/schedule?day=15">Sunday, March 15</option>
-    <option value="/schedule?day=16">Monday, March 16</option>
-    <option value="/schedule?day=16">Tuesday, March 17</option>
-</select>
+	    <option value="">Select Day</option>
+	    <option value="/schedule?day=13">Friday, March 13</option>
+	    <option value="/schedule?day=14">Saturday, March 14</option>
+	    <option value="/schedule?day=15">Sunday, March 15</option>
+	    <option value="/schedule?day=16">Monday, March 16</option>
+	    <option value="/schedule?day=16">Tuesday, March 17</option>
+	</select>
+
+	<p id="updated_ago">Updated <%= time_ago_in_words(@created_at) %> ago</p>
 </div>
 <div id="schedules_boxer">
 <div id="schedules_container">
