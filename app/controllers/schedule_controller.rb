@@ -22,10 +22,10 @@ class ScheduleController < ApplicationController
 
 		if(last_event != nil && ( (now - last_event.created_at) < max_age))
 			puts "Loading from db"
-			evts = Event.where(:event_day == day_int);
+			evts = Event.where("event_day = #{day_int}");
 			@events = evts.to_a()
 		else
-			Event.delete_all
+			Event.delete("event_day = #{day_int}")
 			puts "Scraping site!"
 			doc = Nokogiri::HTML(open("http://schedule.sxsw.com/?conference=interactive&day=#{day}"))
 			rows = doc.css("div.eventcol")
