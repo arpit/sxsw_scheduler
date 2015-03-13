@@ -9,7 +9,7 @@ body{
 }
 
 #date_chooser{
-	height: 5vh;
+	height: 10vh;
   	width: 100%;
   	padding: 10px;
   	text-align: center;
@@ -27,8 +27,6 @@ body{
 
  #updated_ago{
  	color:white;
- 	right:0;
- 	top:0;
  	font-weight:normal;
  	padding:10px;
  	font-size:12px;
@@ -107,6 +105,26 @@ li{
 	padding: 10px;
 }
 
+.dot{
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	margin:2px;
+
+}
+
+.interactive_dot{
+	background: red;
+}
+
+.music_dot{
+	background: red;
+}
+
+.movie_dot{
+	background: red;
+}
+
 #app_container{
 
 }
@@ -140,7 +158,7 @@ li{
   }
 
   .time_slot{
-  	width:70vw;
+  	width:50vw;
   }
 
   .time_header{
@@ -148,7 +166,7 @@ li{
   }
 
   #schedules_boxer{
-  	max-height: 95vh;
+  	max-height: 90vh;
   }
 
   .star{

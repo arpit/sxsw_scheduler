@@ -16,10 +16,7 @@ class ScheduleController < ApplicationController
 
 		last_event = Event.where("event_day = #{day_int}").last
 		now = Time.now
-		if(last_event != nil)
-			puts "HOW OLD >>> #{(now - last_event.created_at)} "
-		end
-
+		
 		if(last_event != nil && ( (now - last_event.created_at) < max_age))
 			puts "Loading from db"
 			evts = Event.where("event_day = #{day_int}");
